@@ -45,11 +45,16 @@ h4 {}
 h5 {}
 h6 {}
 
-header {
+header {}
+
+#page_title {
     background: #424242;
-    color: #fafafa;
     width: 100%;
     text-align: center;
+}
+
+#page_title a {
+    color: #fafafa;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -212,10 +217,18 @@ dd {}
 Inline text semantics
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-a {}
-a:visited {}
-a:hover {}
-a:active {}
+a {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
 
 strong {}
 b {}
