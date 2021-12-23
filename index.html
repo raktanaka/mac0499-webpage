@@ -3,10 +3,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="BCC - TCC 2021">
+        <meta name="description" content="BCC IME-USP - TCC 2021">
         <meta name="author" content="Daniel Hotta ; Rafael ; Ricardo Akira Tanaka 9778856">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TCC - BCC 2021 - IA em Jogo</title>
+        <title>TCC - BCC IME-USP 2021 - Algoritmo Genético para Geração de Ondas de Inimigos em Jogos</title>
 
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
@@ -14,243 +14,105 @@
     <body>
 
         <header id="page_title">
-            <h1><a href="#landing" onclick=showContent("landing")>MAC0499 - TCC BCC 2021</h1>
+            <h1><a href="#landing" onclick="window.location.reload();">Trabalho de Formatura<br>
+                BCC IME-USP 2021</h1>
         </header>
 
         <nav id="navbar">
             <ul>
                 <li><a href="#orientadores" onclick=showContent("orientadores")>ORIENTADORES</a></li>
                 <li><a href="#alunos" onclick=showContent("alunos")>ALUNOS</a></li>
+                <li><a href="#proposta" onclick=showContent("proposta2")>PROPOSTA</a></li>
+                <li><a href="#repos" onclick=showContent("repos")>REPOSITÓRIOS</a></li>
             </ul>
         </nav>
 
         <div id="content" class="main">
             <section id="landing" class="show">
                 <h2 style="text-align:center;">
-                    TRABALHO DE FORMATURA - BCC (IME / USP):<br>
-                    PROPOSTA DE TRABALHO
+                    Algoritmo Genético para Geração de Ondas de Inimigos em Jogos
                 </h2>
-        
+            </section>
+
+            <section id="alunos">
                 <p style="text-align:center;">
-                    Alunos:<br>
+                    <b>Alunos:</b><br>
                     Daniel Yoshio Hotta<br>
                     Rafael Gonçalves Pereira da Silva<br>
                     Ricardo Akira Tanaka
                 </p>
-        
-                <p style="text-align:center;">Orientadores:<br>
+            </section>
+
+            <section id="orientadores">
+                <p style="text-align:center;">
+                    <b>Orientadores:</b><br>
                    Prof. Marco Dimas Gubitoso<br>
                    Wilson Kazuo Mizutani<br>
                 </p>
-        
-                <h2>
-                    1. INTRODUÇÃO
-                </h2>
-        
-                <p>
-                    A área de inteligência artificial contribui de maneira ampla no 
-                    campo dos jogos eletrônicos, em grande parte servindo para a 
-                    geração de estratégias e comportamentos de oponentes ao jogador. 
-                    Considerando a prevalência de sistemas com inteligência artificial 
-                    no cotidiano atual - aparelhos eletrônicos como celulares, 
-                    televisores e outros eletrônicos com assistentes virtuais, 
-                    reconhecimento facial, etc. - e o constante crescimento do 
-                    mercado de jogos eletrônicos global, a combinação de inteligência 
-                    artificial e jogos eletrônicos representam parte relevante na 
-                    área da computação.
+            </section>
+
+            <section id="resumo">
+                <p style="text-align:center;">
+                    <b>Resumo:</b><br>
+                    Este trabalho se propõe a estudar a viabilidade de um algoritmo 
+                    evolutivo para geração de ondas de oponentes em jogos cujo o 
+                    objetivo do jogador é eliminá-los. Para ampliar o escopo do 
+                    projeto, foi definido que o algoritmo desenvolvido deveria ser 
+                    o mais genérico possível, possibilitando sua implementação em 
+                    diversos jogos, apenas com pequenos refatoramentos do código. 
+                    Considerando a existência de ondas de inimigos, cujos individuais 
+                    podem obter sucesso ou fracasso contra o jogador, definiu-se 
+                    que um algoritmo genético seria apropriado, já que o mesmo poderia 
+                    usar as ondas como população e conseguiria obter candidatos 
+                    de sucesso para a próxima onda, sem a necessidade de características 
+                    específicas do jogo, e se adaptando a mudanças nas condições 
+                    ou da estratégia de quem está jogando. Foram desenvolvidos dois 
+                    protótipos de jogos dentro das categorias delimitadas, um <i>Tower Defense</i> 
+                    e um <i>Top-Down Shooter</i>, com ferramentas de código aberto 
+                    como a <i>game engine Godot</i>. Os jogos foram selecionados 
+                    por possuírem suficientes características comuns entre sí, permitindo 
+                    a implementação do mesmo algoritmo com pequenas adaptações, 
+                    e ao mesmo tempo diferentes o suficiente para produzirem experiências 
+                    e resultados diferentes. Durante o desenvolvimento diversos 
+                    fatores e decisões se mostraram essenciais ao algoritmo, como 
+                    diferentes necessidades de <i>fitness</i> e mutações em cada 
+                    jogo e entre ondas de inimigos. Finalmente foram desenvolvidos 
+                    métodos de teste e métricas de avaliação para, com dados objetivos, 
+                    obter indícios de que o algoritmo seria superior a implementações 
+                    ingênuas como uma geração aleatória. Os resultados aparentam 
+                    maior adequação a jogos mais determinísticos, onde um ambiente 
+                    mais estático acaba favorecendo o algoritmo.
                 </p>
-        
-                <h2>
-                    2. OBJETIVOS
-                </h2>
-        
-                <p>
-                    Dentro do escopo de oponentes de jogadores em jogos eletrônicos, 
-                    foi definido que o trabalho terá foco em desenvolver algoritmos 
-                    de inteligência artificial com uma abordagem evolutiva e 
-                    adaptativa, para utilização em um jogo eletrônico, que sejam 
-                    capazes de gerar inimigos com dificuldades crescentes, capazes 
-                    de se adaptarem à estratégia e habilidades do jogador, sem 
-                    prejudicar a jogabilidade, isto é, não é o objetivo produzir um 
-                    oponente impossível de ser vencido.<br>
-                    Logo, pretende-se produzir um jogo em <a href="https://godotengine.org/">Godot Engine</a> com diferentes 
-                    modos de jogabilidade, a partir de recursos gráficos (<i>assets</i>) 
-                    disponíveis sob licenças de <i>software</i> livre, com inimigos 
-                    utilizando algoritmos evolutivos que se adaptam ao jogador, e 
-                    utilizando diversos gêneros, alguns apresentados a seguir:
+            </section>
+
+            <section id="monografia">
+                <a style="text-align:center;" href="assets/Monografia.pdf">
+                    <h2>LINK PARA MONOGRAFIA</h2>
+                </a>
+            </section>
+
+            <section id="repos" class="hide">
+                <p style="text-align:center;">
+                    <embed class="container" type="text/html" src="repos.html">
                 </p>
-        
-                <ul>
-                    <li>
-                        <i>Tower Defense</i>
-                        <p>
-                            Jogo baseado na defesa de território, onde o jogador deve 
-                            posicionar defesas em um caminho pelo qual ondas de 
-                            oponentes irão passar e impedir o seu avanço.
-                        </p>
-                        <a href="https://files.ironhidegames.com/ironhidegames-www-upfiles/original/Games/751ffc46-cf39-4b01-ab82-39673627c11c.jpg">
-                            <img class="img-prop" src="assets/kingdom_rush.jpg"  alt="Kingdom Rush" style="text-align: center;" width=100%>
-                        </a>
-                        <p style="text-align: center;">
-                            Figura 2.1 - <i><a href="https://www.ironhidegames.com/Games/kingdom-rush">Kingdom Rush</a>, tower defense</i>
-                        </p>
-                    </li>
-                    <li>
-                        <i>Hack and Slash</i>
-                        <p>
-                            Jogo de ação onde o jogador precisa derrotar diversos 
-                            inimigos, em geral utilizando de armas brancas longas ou 
-                            magia, em um mapa tradicionalmente em visão isométrica.
-                        </p>
-                        <a href="https://blzmedia-a.akamaihd.net/d3/media/screenshots/reaper-of-souls-05-large.jpg">
-                            <img class="img-prop" src="assets/diablo.jpg"  alt="Diablo III" style="text-align: center;" width=100%>
-                        </a>
-                        <p style="text-align: center;">
-                            Figura 2.2 - <i><a href="https://us.diablo3.com/en-us/">Diablo III</a>, Hack and Slash</i>
-                        </p>
-                    </li>
-                    <li>
-                        <i>Beat'em Up</i>
-                        <p>
-                            Jogo de ação onde o jogador precisa derrotar diversos 
-                            inimigos, em geral sem armas, tradicionalmente em visão 
-                            lateral, onde o mapa rola lateralmente.
-                        </p>
-                        <a href="https://www.lizardcube.com/presskit/StreetsofRage4/images/1.%20Main%20Game%20Screenshots/StreetsOfRage4-0008.png">
-                            <img class="img-prop" src="assets/streets_rage.png"  alt="Streets of Rage 4" style="text-align: center;" width=100%>
-                        </a>
-                        <p style="text-align: center;">
-                            Figura 2.3 - <i><a href="https://www.streets4rage.com/">Streets of Rage 4</a>, Beat'em Up</i>
-                        </p>
-                    </li>
-                    <li>
-                        <i>Real-Time Strategy</i> ou <i>Turn-based Strategy</i>
-                        <p>
-                            Jogo de estratégia em tempo real ou em turnos, onde o 
-                            jogador precisa explorar o mapa, gerenciar recursos e 
-                            exércitos, visando defender seu território ou atacar 
-                            os oponentes.
-                        </p>
-                        <a href="https://images.blz-contentstack.com/v3/assets/blt2ef8b4fee426fd3e/blt07227bea52668d97/5f4616250ac6ce5468cebb19/screenshot_3.jpg">
-                            <img class="img-prop" src="assets/starcraft.jpg" alt="Starcraft II" style="text-align: center;" width=100%>
-                        </a>
-                        <p style="text-align: center;">
-                            Figura 2.4 - <i><a href="https://starcraft2.com/">Starcraft II</a>, Real-Time Strategy</i>
-                        </p>
-                        <a href="https://pbs.twimg.com/media/CpDaQN3VIAAYmbR?format=jpg&name=large">
-                            <img class="img-prop" src="assets/civ.jpeg" alt="Civilization VI" style="text-align: center;" width=100%>
-                        </a>
-                        <p style="text-align: center;">
-                            Figura 2.5 - <i><a href="https://civilization.com/">Civilization VI</a>, Turn-Based Strategy</i>
-                        </p>
-                    </li>
-                </ul>
-        
-                <h2>
-                    3. PASSOS E CRONOGRAMA
-                </h2>
-        
-                <table>
-                    <tr>
-                        <th>Passos</th>
-                        <th>Cronograma</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>
-                                    Familiarização com Godot Engine.
-                                </li>
-                                <li>
-                                    Desenvolver um jogo básico.
-                                </li>
-                                <li>
-                                    Estudo de viabilidade de diferentes 
-                                    algoritmos evolutivos.
-                                </li>
-                                <li>
-                                    Verificar possibilidade de uso de testes durante 
-                                    o desenvolvimento do jogo e algoritmos.
-                                </li>
-                            </ul>
-                        </td>
-                        <td>
-                            Junho<br>
-                            Julho
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>
-                                    Desenvolver versões iniciais dos algoritmos 
-                                    evolutivos e fases iniciais do jogo.
-                                </li>
-                                <li>
-                                    Iniciar monografia.
-                                </li>
-                            </ul>
-                        </td>
-                        <td>
-                            Agosto
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>
-                                    Iterar versões do jogo e do algoritmo, 
-                                    possivelmente utilizando feedback 
-                                    do <i>USPGameDev</i>.
-                                </li>
-                            </ul>
-                        </td>
-                        <td>
-                            Setembro<br>
-                            Outubro<br>
-                            Novembro
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>
-                                    Iniciar desenvolvimento da apresentação
-                                </li>
-                                <li>
-                                    Finalizar o jogo.
-                                </li>
-                            </ul>
-                        </td>
-                        <td>
-                            Dezembro
-                        </td>
-                    </tr>
-                </table>
             </section>
-            <section id="orientadores" class="hide">
-                <p>Marco Dimas Gubitoso</p>
-                <p>Wilson Kazuo Mizutani</p>
-            </section>
-            <section id="alunos" class="hide">
-                <p>Daniel Yoshio Hotta</p>
-                <p>Rafael Gonçalves Pereira da Silva</p>
-                <p>Ricardo Akira Tanaka</p>
-            </section>
-            <section id="proposta" class="hide">
-                <div class="container">
-                    <iframe class="iframe-content" title="Proposta" src="proposta.html"></iframe>
-                </div>
+
             </section>
             <section id="proposta2" class="hide">
+                <a style="text-align:center;" href="assets/Proposta.pdf"><h2>Link para o PDF</h2></a><br>
                 <embed class="container" type="text/html" src="proposta.html">
+<!----                <div class="container">
+                    <iframe class="iframe-content" title="Proposta" src="proposta.html"></iframe>
+                </div>
+            -->
             </section>
+
         </div>
 
-        <footer>
+<!----        <footer>
             TCC BCC 2021
         </footer>
-
+    -->
 
         <script src="" async defer></script>
         <script type="text/javascript" src="js/script.js"></script>
