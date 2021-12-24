@@ -52,7 +52,7 @@
             </section>
 
             <section id="resumo">
-                <p style="text-align:center;">
+                <p style="text-align:center; margin: 2% 15% ">
                     <b>Resumo:</b><br>
                     Este trabalho se propõe a estudar a viabilidade de um algoritmo 
                     evolutivo para geração de ondas de oponentes em jogos cujo o 
@@ -82,6 +82,38 @@
                     ingênuas como uma geração aleatória. Os resultados aparentam 
                     maior adequação a jogos mais determinísticos, onde um ambiente 
                     mais estático acaba favorecendo o algoritmo.
+                </p>
+            </section>
+
+            <section id="abstract">
+                <p style="text-align:center; margin: 2% 15% ">
+                    <b>Abstract:</b><br>
+                    This project is a study around the viability of an evolutionary 
+                    algorithm for generating waves of enemies in games, where the 
+                    player´s objective is eliminating them. To expand the subject, 
+                    it was defined that the algorithm should be as generic as possible 
+                    to allow its implementation in other games, with minor code 
+                    refactoring. Considering the enemy wave as a group of individuals 
+                    that can end up in a success or failure in the round, a genetic 
+                    algorithm seemed suitable, since it would be able to use the 
+                    waves as population, with each individual a candidate for the 
+                    next wave, representing the next generation of individuals. 
+                    The algorithm does not depend on extensive knowledge about the 
+                    game mechanics, being able to adapt to ambient changes and player 
+                    strategy. Two game prototypes were developed, a Tower Defense 
+                    and a Top-Down Shooter, using open source tools such as the 
+                    Godot Game Engine. The games were selected due to its common 
+                    characteristics in style, which allows using the same evolutionary 
+                    algorithm, but at the same time they diverge in gameplay and 
+                    strategy, producing different results and experiences. During 
+                    development several factors and decisions were key to the algorithm, 
+                    such as the fitness and mutation calculations for each game, 
+                    and each wave. To enable performance analysis, testing methods 
+                    and evaluation metrics were developed, enabling objective data 
+                    to be gathered and measured against randomly generating enemies. 
+                    Data analysis showed that the genetic algorithm performs above 
+                    other naive methods, but is more successful in deterministic 
+                    games, where a more stable environment favors the algorithm.
                 </p>
             </section>
 
